@@ -12,6 +12,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    CGRect viewRect = [[UIScreen mainScreen] bounds]; self.window = [[UIWindow alloc] initWithFrame:viewRect];
+    UIViewController *colorTouchVC = [[UIViewController alloc] init];
+    UIView *colorView = [[UIView alloc] initWithFrame:viewRect];
+    colorView.backgroundColor = [UIColor yellowColor];
+    colorTouchVC.view = colorView;
+    self.window.rootViewController = colorTouchVC;
+    [self.window makeKeyAndVisible];
+    NSLog(@"Screen is %f tall and %f wide",
+          viewRect.size.height, viewRect.size.width);
     // Override point for customization after application launch.
     return YES;
 }
