@@ -12,7 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //test
+    
     CGRect viewRect = [[UIScreen mainScreen] bounds]; self.window = [[UIWindow alloc] initWithFrame:viewRect];
     UIViewController *colorTouchVC = [[UIViewController alloc] init];
     UIView *colorView = [[UIView alloc] initWithFrame:viewRect];
