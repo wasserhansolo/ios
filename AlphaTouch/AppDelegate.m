@@ -22,6 +22,7 @@
     [self.window makeKeyAndVisible];
     NSLog(@"Screen is %f tall and %f wide",
           viewRect.size.height, viewRect.size.width);
+    //another test
     // Override point for customization after application launch.
     return YES;
 }
