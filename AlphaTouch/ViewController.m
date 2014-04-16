@@ -18,12 +18,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.greenButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    _greenButton.frame = CGRectMake(120, 200, 100, 44);
-    [_greenButton setTitle:@"Make green!" forState:UIControlStateNormal];
+    //self.greenButton = [UIButton buttonWithType:<#(UIButtonType)#>];
+    CGRect frame = CGRectMake(120, 200, 100, 44);
+    self.greenButton = [[UIButton alloc] initWithFrame:frame];
+    [self.greenButton setTitle:@"Make green!" forState:UIControlStateNormal];
     [_greenButton addTarget:self action:@selector(changeBackgroundColor:) forControlEvents:UIControlEventTouchUpInside];
-    [_greenButton setBackgroundColor:[UIColor grayColor]];
-    [self.view addSubview:_greenButton];
+    [self.greenButton setBackgroundColor:[UIColor grayColor]];
+    [self.view addSubview:self.greenButton];
     
     
     UIButton *blueButton = [UIButton buttonWithType:UIButtonTypeSystem];
